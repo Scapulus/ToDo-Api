@@ -1,24 +1,34 @@
 <?php
 
-namespace Database;
-
-use PDO;
-
-$pdo = new PDO('sqlite:todo-api.db');
-$statement = $pdo->query("SELECT * FROM user");
-$row = $statement->fetchAll(PDO::FETCH_ASSOC);
+try
+{
+    $pdo = new PDO('sqlite:todo-api.db');
+}
+catch (PDOException $exception)
+{
+    echo "SQL Error: " . $exception->getMessage();
+}
 
 class Database
 {
-    public function getToDos()
+    static public function getAllUser()
     {
+        global $pdo;
+        $statement = $pdo->query("SELECT * FROM user");
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+    static public function getToDos($userId)
+    {
+        global $pdo;
+        $statement = $pdo->query("SELECT * FROM todo WHERE shareId=$userId");
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+    static public function setToDos($todoName, $todoText)
+    {
+        global $pdo;
 
     }
-    public function setToDos($todoText)
-    {
-
-    }
-    public function editToDos($todoId, $todoText)
+    static public function editToDos($todoId, $todoName, $todoText)
     {
 
     }
