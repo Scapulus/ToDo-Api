@@ -9,7 +9,7 @@ require_once 'includes/database.inc.php';
     <head>
         <meta content="width=device-width, initial-scale=1.0">
         <title>ToDo-List - Login</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_login.css">
         <script src="https://kit.fontawesome.com/ffb3484693.js" crossorigin="anonymous"></script>
     </head>
     <body>
