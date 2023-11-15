@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
     try
     {
 
-        require_once 'database.inc.php';
+        require_once '../database.inc.php';
         require_once 'signup_model.inc.php';
         require_once 'signup_contr.inc.php';
 
@@ -30,18 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
             $errors["emailUsed"] = 'Email schon registriert!';
         }
 
-        require_once 'config_session.inc.php';
+        require_once '../config_session.inc.php';
 
         if ($errors)
         {
             $_SESSION["errors_signup"] = $errors;
-            header("Location: ../signup.php");
+            header("Location: ../../signup.php");
             die();
         }
 
         createUser($pdo, $email, $username, $password);
 
-        header("Location: ../signup.php?signup=success");
+        header("Location: ../../signup.php?signup=success");
 
         $pdo = null;
         $stmt = null;
@@ -55,6 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 }
 else
 {
-    header("Location: ../signup.php");
+    header("Location: ../../signup.php");
     die();
 }

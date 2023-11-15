@@ -15,6 +15,7 @@ function checkLoginErrors()
     }
     elseif (isset($_GET["login"]) && $_GET["login"] === "success")
     {
-        echo '<p class="form-success">Login erfolgreich!</p>';
+        //echo '<p class="form-success">Login erfolgreich!</p>';
+        header("Location: ../../todo.php");
     }
 }

@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 
     try
     {
-        require_once 'database.inc.php';
+        require_once '../database.inc.php';
         require_once 'login_model.inc.php';
         require_once 'login_contr.inc.php';
 
@@ -33,12 +33,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
         }
 
         errorHandling:
-        require_once 'config_session.inc.php';
+        require_once '../config_session.inc.php';
 
         if ($errors)
         {
             $_SESSION["errors_login"] = $errors;
-            header("Location: ../index.php");
+            header("Location: ../../index.php");
             die();
         }
 
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 
         $_SESSION["last_regeneration"] = time();
 
-        header("Location: ../index.php?login=success");
+        header("Location: ../../index.php?login=success");
         $pdo = null;
         $stat = null;
         die();
@@ -63,6 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 }
 else
 {
-    header("Location: ../index.php");
+    header("Location: ../../index.php");
     die();
 }

@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/config_session.inc.php';
-require_once 'includes/signup_view.inc.php';
+require_once 'includes/signup/signup_view.inc.php';
 require_once 'includes/database.inc.php';
 ?>
 
@@ -26,7 +26,7 @@ require_once 'includes/database.inc.php';
     <div class="container">
         <div class="center-box">
             <h2>Registrieren</h2>
-            <form action="includes/signup.inc.php" method="post">
+            <form action="includes/signup/signup.inc.php" method="post">
                 <div class="input-group">
                     <div class="input-field">
                         <i class="fa-regular fa-envelope"></i>
