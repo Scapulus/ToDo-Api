@@ -24,6 +24,7 @@
     background: #666666;
     padding: 50px 60px 70px;
     text-align: center;
+    border-radius: 8px;
 }
 .center-box h2{
     font-size: 30px;
@@ -61,7 +62,6 @@ input{
     margin-left: 15px;
     color: #999;
 }
-
 
 .button-field{
     width: 100%;
@@ -128,4 +128,10 @@ header{
 }
 .navigation a:hover:after{
     transform: scaleX(1);
+}
+
+.message-field{
+    font-size: 18px;
+    color: white;
+    padding: 18px 15px;
 }
