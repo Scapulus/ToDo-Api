@@ -11,6 +11,10 @@ catch (PDOException $exception)
 
 class Database
 {
+    static public function newUser()
+    {
+
+    }
     static public function getAllUser()
     {
         global $pdo;
