@@ -19,15 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 
         if (isInputEmpty($email, $username, $password))
         {
-            $errors["emptyInput"] = 'Fill in all fields!';
+            $errors["emptyInput"] = 'Alle Felder ausfüllen!';
         }
         if (isEmailInvalid($email))
         {
-            $errors["invalidEmail"] = 'Invalid email used!';
+            $errors["invalidEmail"] = 'Ungültige Emailadresse!';
         }
         if (isEmailRegistered($pdo, $email))
         {
-            $errors["emailUsed"] = 'Email already registered!';
+            $errors["emailUsed"] = 'Email schon registriert!';
         }
 
         require_once 'config_session.inc.php';
@@ -35,13 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
         if ($errors)
         {
             $_SESSION["errors_signup"] = $errors;
-            header("Location: ../index.php");
+            header("Location: ../signup.php");
             die();
         }
 
         createUser($pdo, $email, $username, $password);
 
-        header("Location: ../index.php?signup=success");
+        header("Location: ../signup.php?signup=success");
 
         $pdo = null;
         $stmt = null;
@@ -55,6 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
 }
 else
 {
-    header("Location: ../index.php");
+    header("Location: ../signup.php");
     die();
 }

@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/config_session.inc.php';
-require_once 'includes/login_view.inc.php';
+require_once 'includes/signup_view.inc.php';
 require_once 'includes/database.inc.php';
 ?>
 
@@ -8,7 +8,7 @@ require_once 'includes/database.inc.php';
 <html lang="en" dir="ltr">
     <head>
         <meta content="width=device-width, initial-scale=1.0">
-        <title>ToDo-List - Registrieren</title>
+        <title>ToDo-List - Login</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="https://kit.fontawesome.com/ffb3484693.js" crossorigin="anonymous"></script>
     </head>
@@ -20,17 +20,21 @@ require_once 'includes/database.inc.php';
         </h1>
         <nav class="navigation">
             <a href="#">Home</a>
-            <a href="/signup.php">Registrieren</a>
+            <a href="/index.php">Login</a>
         </nav>
     </header>
     <div class="container">
         <div class="center-box">
-            <h2>Login</h2>
-            <form action="includes/login.inc.php" method="post">
+            <h2>Registrieren</h2>
+            <form action="includes/signup.inc.php" method="post">
                 <div class="input-group">
                     <div class="input-field">
                         <i class="fa-regular fa-envelope"></i>
                         <input type="text" name="email" placeholder="E-Mail">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" name="username" placeholder="Benutzername">
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
@@ -38,11 +42,11 @@ require_once 'includes/database.inc.php';
                     </div>
                 </div>
                 <div class="button-field">
-                    <button type="submit" name="submit">Anmelden</button>
+                    <button type="submit" name="submit">Registrieren</button>
                 </div>
                 <div class="message-field">
                     <?php
-                        CheckLoginErrors();
+                        CheckSignupErrors();
                     ?>
                 </div>
             </form>

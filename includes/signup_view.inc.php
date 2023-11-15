@@ -8,8 +8,6 @@ function checkSignupErrors()
     {
         $errors = $_SESSION['errors_signup'];
 
-        echo "<br>";
-
         foreach ($errors as $error)
         {
             echo '<p class="form-error">' . $error . '</p>';
