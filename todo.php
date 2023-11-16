@@ -31,7 +31,7 @@ require_once 'includes/database.inc.php';
         <div class="options">
             <nav>
                 <a href="#" onclick="toggleElement('eins')">ToDo's auflisten</a>
-                <a onclick="">Neue ToDo</a>
+                <a onclick="">Neue ToDo's</a>
                 <a>ToDo's löschen</a>
             </nav>
         </div>

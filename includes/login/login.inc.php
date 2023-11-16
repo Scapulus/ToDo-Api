@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
         if (isInputEmpty($email, $password))
         {
             $errors["emptyInput"] = 'Alle Felder ausfüllen!';
-            goto errorHandling;
+            return;
         }
 
         $result = getEmail($pdo, $email);
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
             $errors["loginIncorrect"] = 'Falsche Login Daten!';
         }
 
-        errorHandling:
+        
         require_once '../config_session.inc.php';
 
         if ($errors)
