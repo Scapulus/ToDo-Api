@@ -19,7 +19,7 @@ require_once 'includes/database.inc.php';
             ToDo-List
         </h1>
         <nav class="navigation">
-            <a href="#">Home</a>
+            <a href="/todo.php">Home</a>
             <a href="/signup.php">Registrieren</a>
         </nav>
     </header>
