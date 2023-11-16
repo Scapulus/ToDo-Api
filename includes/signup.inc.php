@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
     }
     catch (PDOException $exception)
     {
-        die("Connection failed: " . $exception->getMessage());
+        die("Query failed: " . $exception->getMessage());
     }
 }
 else

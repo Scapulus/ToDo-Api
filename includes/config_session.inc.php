@@ -44,7 +44,7 @@ else
     }
 }
 
-if (!isset($_SESSION["last_regeneration"]))
+/*if (!isset($_SESSION["last_regeneration"]))
 {
     regenerateSessionId();
 }
@@ -55,7 +55,7 @@ else
     {
         regenerateSessionId();
     }
-}
+}*/
 function regenerateSessionIdLoggedin()
 {
     session_regenerate_id(true);
