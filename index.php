@@ -9,7 +9,7 @@ require_once 'includes/database.inc.php';
     <head>
         <meta content="width=device-width, initial-scale=1.0">
         <title>ToDo-List - Registrieren</title>
-        <link rel="stylesheet" href="css/style_login.css">
+        <link rel="stylesheet" href="css-js/style_login.css">
         <script src="https://kit.fontawesome.com/ffb3484693.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -19,8 +19,8 @@ require_once 'includes/database.inc.php';
             ToDo-List
         </h1>
         <nav class="navigation">
-            <a href="/todo.php">Home</a>
-            <a href="/signup.php">Registrieren</a>
+            <a href="/todo.php"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="/signup.php"><i class="fa-solid fa-right-to-bracket"></i> Registrieren</a>
         </nav>
     </header>
     <div class="container">
